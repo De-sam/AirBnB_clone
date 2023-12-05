@@ -23,7 +23,7 @@ class Cmd(cmd.Cmd):
 	
 	def do_EOF(self, line):
 		"""
-		Handle the 'EOD' command to exit the console
+		Handles the 'EOD' command to exit the console
 
 		PARAMETERS:
 		--self: An instance of the console processor
