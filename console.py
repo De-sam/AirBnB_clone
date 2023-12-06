@@ -1,10 +1,10 @@
 #!/usr/bin/python3
+"""Define a cmd class"""
 import cmd
 
 class Cmd(cmd.Cmd):
 	""" Console for the hbnb app"""
 	prompt = "(hbnb)"
-
 
 	def do_quit(self, line):
 		"""
