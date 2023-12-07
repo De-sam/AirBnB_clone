@@ -12,6 +12,7 @@ class TestBaseModel(unittest.TestCase):
     """
     Test cases for the BaseModel class.
     """
+
     def test_base_model_instance(self):
         """
         Test creation of a BaseModel instance.
@@ -35,7 +36,8 @@ class TestBaseModel(unittest.TestCase):
         my_model.name = "My First Model"
         my_model.my_number = 89
 
-        expected_str = "[BaseModel] ({}) {}".format(my_model.id, my_model.__dict__)
+        expected_str = "[BaseModel] ({}) {}".format(
+            my_model.id, my_model.__dict__)
         self.assertEqual(str(my_model), expected_str)
 
     def test_base_model_save(self):
@@ -60,10 +62,13 @@ class TestBaseModel(unittest.TestCase):
         obj_dict = my_model.to_dict()
 
         self.assertEqual(obj_dict['__class__'], 'BaseModel')
-        self.assertEqual(obj_dict['created_at'], my_model.created_at.isoformat())
-        self.assertEqual(obj_dict['updated_at'], my_model.updated_at.isoformat())
+        self.assertEqual(obj_dict['created_at'],
+                         my_model.created_at.isoformat())
+        self.assertEqual(obj_dict['updated_at'],
+                         my_model.updated_at.isoformat())
         self.assertEqual(obj_dict['name'], 'My First Model')
         self.assertEqual(obj_dict['my_number'], 89)
+
 
 if __name__ == '__main__':
     unittest.main()
