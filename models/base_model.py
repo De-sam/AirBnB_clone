@@ -14,13 +14,29 @@ class BaseModel:
 common members for other classes.
     """
 
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         """
         Initializes an instance of the BaseModel.
+
+        Parameters:
+        - args: Unused variable number of non-keyworded arguments.
+        - kwargs: Keyworded variable number of arguments.
         """
-        self.id = str(uuid4())
-        self.created_at = datetime.now()
-        self.updated_at = datetime.now()
+        if not kwargs:
+            # If kwargs is empty, it's a new instance
+            self.id = str(uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = datetime.now()
+        else:
+            # If kwargs is not empty, it's a reconstructed instance
+            for key, value in kwargs.items():
+                if key == "__class__":
+                    continue
+                if key in ["created_at", "updated_at"]:
+                    setattr(self, key, datetime.strptime(
+                        value, "%Y-%m-%dT%H:%M:%S.%f"))
+                else:
+                    setattr(self, key, value)
 
     def __str__(self):
         """
