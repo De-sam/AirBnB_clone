@@ -20,8 +20,6 @@ class HBNBCommand(cmd.Cmd):
         --True: Exits for the cmdloop
         """
         return True
-    """alias for the qyit command"""
-    do_exit = do_quit
 
     def do_EOF(self, line):
         """
