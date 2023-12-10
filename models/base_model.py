@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
 Module: base_model
-Defines the BaseModel class, a parent class with common members for other classes.
+Defines the BaseModel class, a parent class with
+common members for other classes.
 """
 from uuid import uuid4
 from datetime import datetime
@@ -9,7 +10,8 @@ from datetime import datetime
 
 class BaseModel:
     """
-    BaseModel class represents a parent class with common members for other classes.
+    BaseModel class represents a parent class with
+common members for other classes.
     """
 
     def __init__(self):
@@ -34,7 +36,8 @@ class BaseModel:
 
     def to_dict(self):
         """
-        Returns a dictionary representation of attributes belonging to an instance.
+        Returns a dictionary representation
+of attributes belonging to an instance.
 
         Returns:
             dict: A dictionary containing the instance attributes.
