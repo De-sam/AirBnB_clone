@@ -3,7 +3,8 @@
 import cmd
 
 
-class Cmd(cmd.Cmd):
+class HBNBCommand(cmd.Cmd):
+
     """ Console for the hbnb app"""
     prompt = "(hbnb)"
 
@@ -37,4 +38,4 @@ class Cmd(cmd.Cmd):
 
 
 if __name__ == '__main__':
-    Cmd().cmdloop()
+    HBNBCommand().cmdloop()
