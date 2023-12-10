@@ -6,6 +6,7 @@ common members for other classes.
 """
 from uuid import uuid4
 from datetime import datetime
+from models import storage
 
 
 class BaseModel:
@@ -27,6 +28,7 @@ common members for other classes.
             self.id = str(uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
+            storage.new(self)
         else:
             # If kwargs is not empty, it's a reconstructed instance
             for key, value in kwargs.items():
@@ -49,6 +51,7 @@ common members for other classes.
         Updates the `updated_at` attribute with the current date time.
         """
         self.updated_at = datetime.now()
+        storage.save()
 
     def to_dict(self):
         """
