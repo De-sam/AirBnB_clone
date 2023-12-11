@@ -5,6 +5,7 @@ Module for FileStorage class
 import json
 from models.base_model import BaseModel
 
+
 class FileStorage:
     """
     Serializes instances to a JSON file and
@@ -14,9 +15,9 @@ class FileStorage:
     __objects = {}
 
     def all(self):
-       """Returns the dictionary __objects"""
-       return self.__objects
-        
+        """Returns the dictionary __objects"""
+        return self.__objects
+
     def new(self, obj):
         """
         Sets in __objects the obj with key <obj class name>.id

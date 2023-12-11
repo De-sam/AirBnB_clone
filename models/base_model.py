@@ -39,10 +39,10 @@ class BaseModel:
             self.__dict__.update(kwargs)
 
     def __str__(self):
-       """
-        Returns a string representation for an instance.
-       """
-       return f"[{type(self).__name__}] ({self.id}) {self.__dict__}"
+        """
+         Returns a string representation for an instance.
+        """
+        return f"[{type(self).__name__}] ({self.id}) {self.__dict__}"
 
     def save(self):
         from models import storage
@@ -66,3 +66,4 @@ class BaseModel:
         custom_dict['created_at'] = self.created_at.isoformat()
         custom_dict['updated_at'] = self.updated_at.isoformat()
         return custom_dict
+    
