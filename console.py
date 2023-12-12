@@ -6,18 +6,11 @@ import cmd
 class HBNBCommand(cmd.Cmd):
 
     """ Console for the hbnb app"""
-    prompt = "(hbnb)"
+    prompt = "(hbnb) "
 
     def do_quit(self, line):
-        """
-        Quits or exits the console in interative mode
+        """Quit command to exit the program
 
-        PARAMETERS:
-        --self: An instance of the console processor
-        --line: The 'quit' command input from the user
-
-        RETURNS:
-        --True: Exits for the cmdloop
         """
         return True
 
