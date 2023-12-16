@@ -6,9 +6,12 @@ from shlex import split
 from models import storage
 from models.base_model import BaseModel
 from datetime import datetime
+from models.user import user
+
 
 all_classes = [
-    "BaseModel"]
+    "BaseModel",
+     "User"]
 
 
 class HBNBCommand(cmd.Cmd):
