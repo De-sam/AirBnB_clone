@@ -1,8 +1,13 @@
-header{
-	background-color: #f00; 
-	height: 70px; 
+footer{
+	background-color: #00FF00;
+	height: 60PX; 
 	width: 100%;
-	margin-bottom: 50px;
-	margin: 0;
-	padding: 0;
+	position: fixed;
+	bottom: 0;
+	display: flex; 
+	align-items: center ; 
+	justify-content: center;
+	margin-top: 635px;
+	text-align: center;
+	line-height: 30px;
 }
