@@ -1,0 +1,13 @@
+footer{
+	background-color: #00FF00;
+	height: 60PX; 
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	display: flex; 
+	align-items: center ; 
+	justify-content: center;
+	margin-top: 635px;
+	text-align: center;
+	line-height: 30px;
+}
